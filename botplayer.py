@@ -2,6 +2,7 @@ import selenium.common.exceptions
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from PIL import Image, ImageGrab
 import time
 import os
 
@@ -29,5 +30,8 @@ class DinosaurGameBot:
     def duck(self):
         self.body.send_keys(Keys.ARROW_DOWN)
 
-    def check_for_obstacles(self):
-        pass
+    def get_frame(self):
+        # bbox (xmin, ymin, xmax, ymax)
+        box = ImageGrab.grab(bbox=(350, 450, 500, 650))
+        return box
+
