@@ -2,6 +2,9 @@
 
 A project using the selenium web driver and the Python Imaging Library PIL Fork Pillow. 
 
+## Current HIGH SCORE: **1459**
+<img width="1044" alt="Screenshot 2022-12-02 at 22 11 21" src="https://user-images.githubusercontent.com/111788725/205386802-2d3b0f29-3e67-47b2-b0ef-c8d12eedb043.png">
+
 To use the code you have to **use the web driver for Chrome** because the game is directly launched from the browser.
 
 <img width="625" alt="Screenshot 2022-12-02 at 21 44 24" src="https://user-images.githubusercontent.com/111788725/205382778-45e4e31f-3547-4b91-9e0b-4d75c6d31cc9.png">
