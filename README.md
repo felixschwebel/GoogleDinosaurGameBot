@@ -7,6 +7,8 @@ A project using the selenium web driver and the Python Imaging Library PIL Fork 
 
 To use the code you have to **use the web driver for Chrome** because the game is directly launched from the browser.
 
+Run ```python3 main.py```
+
 <img width="625" alt="Screenshot 2022-12-02 at 21 44 24" src="https://user-images.githubusercontent.com/111788725/205382778-45e4e31f-3547-4b91-9e0b-4d75c6d31cc9.png">
 
 I decided to use a class for the GameBot to I could specify some methods for the bot. In the init-function the web driver is started. Unfortunately an error occurs after the game is launched, I assume because the URL doesn't refer to a real web address. That's why I used the exception handling to continue after the WebDriverException is raised. The game is started by pressing the space bar. Then it waits for 4 seconds using the time module before the bot starts.
