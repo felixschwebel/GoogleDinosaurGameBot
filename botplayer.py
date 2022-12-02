@@ -27,17 +27,16 @@ class DinosaurGameBot:
 
     def jump(self):
         self.body.send_keys(Keys.ARROW_UP)
-
-    def duck(self):
-        pass
+        time.sleep(0.17)
+        self.body.send_keys(Keys.ARROW_DOWN)
 
     def detect_obstacles(self):
         # bbox (xmin, ymin, xmax, ymax)
         # Get the values for the grab-box by trying
-        xmax = 300
-        width = 50
+        xmax = 325
+        width = 40
         ymax = 620
-        height = 220
+        height = 80
         box = ImageGrab.grab(bbox=(xmax-width, ymax-height, xmax, ymax))
         colors = [color[1] for color in box.getcolors()]
         if (172, 172, 172, 255) in colors:
