@@ -24,17 +24,21 @@ class DinosaurGameBot:
         self.body = self.driver.find_element(By.TAG_NAME, 'body')
         self.body.send_keys(Keys.SPACE)
         time.sleep(4)
+        self.time = time.time()
 
     def jump(self):
         self.body.send_keys(Keys.ARROW_UP)
-        time.sleep(0.17)
+        if time.time() > self.time + 50:
+            time.sleep(0.16)
+        else:
+            time.sleep(0.19)
         self.body.send_keys(Keys.ARROW_DOWN)
 
     def detect_obstacles(self):
         # bbox (xmin, ymin, xmax, ymax)
         # Get the values for the grab-box by trying
-        xmax = 325
-        width = 40
+        xmax = 335
+        width = 65
         ymax = 620
         height = 80
         box = ImageGrab.grab(bbox=(xmax-width, ymax-height, xmax, ymax))
