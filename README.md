@@ -5,7 +5,7 @@ A project using the selenium web driver and the Python Imaging Library PIL Fork 
 ## Current HIGH SCORE: **1459**
 <img width="1044" alt="Screenshot 2022-12-02 at 22 11 21" src="https://user-images.githubusercontent.com/111788725/205386802-2d3b0f29-3e67-47b2-b0ef-c8d12eedb043.png">
 
-To use the code you have to **use the web driver for Chrome** because the game is directly launched from the browser.
+To use the code you have to **use the web driver for Chrome** because the game is launched directly from the Chrome browser.
 
 Run ```python3 main.py```
 
@@ -22,3 +22,5 @@ I used the ImageGrab from PIL to grab a little piece of the screen right above t
 When an obstacle is detected the jump function is triggered. I decided to not use the ducking functionality because I would have to check for the lower ground and the middle ground separately. This would slow down the checking process and the reaction time of the Dino. I just used the _ARROW-DOWN_ to get the Dino faster back on the ground. Because the speed of the game is changing with time, this switched from a 0.19 s wait to a 0.16 s wait after 50 seconds. 
 
 <img width="327" alt="Screenshot 2022-12-02 at 22 02 51" src="https://user-images.githubusercontent.com/111788725/205385639-be50d2f3-b9f9-4afb-9877-23d6afb69b74.png">
+
+At this stage, the automation is far from perfect, but the basic functionality - detecting an obstacle and reacting to it - is implemented. To improve the GameBot in the future the values of the detection box ```xmax, width, ymax, height``` and the time before the _ARROW_DOWN_ Key is sent, would have to be fine-tuned and changed over time. **For now, the Dino only reaches scores of around 400 to 500 consistently.**  
