@@ -41,10 +41,9 @@ class DinosaurGameBot:
         width = 65
         ymax = 620
         height = 80
-        box = ImageGrab.grab(bbox=(xmax-width, ymax-height, xmax, ymax))
+        box = ImageGrab.grab(bbox=(xmax - width, ymax - height, xmax, ymax))
         colors = [color[1] for color in box.getcolors()]
         if (172, 172, 172, 255) in colors:
-           return True
+            return True
         else:
-           return False
-
+            return False
